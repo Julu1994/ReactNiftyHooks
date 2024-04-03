@@ -8,7 +8,7 @@ const cache: CacheType = {}
  * @param url The URL to fetch data from.
  * @returns An object containing `data`, `isLoading`, `error`, and `isError`.
  */
-export function useFetch<T>(url: string): UseFetchReturnType<T> {
+export function useDataFetch<T>(url: string): UseFetchReturnType<T> {
   const [data, setData] = useState<T | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<Error | null>(null)
