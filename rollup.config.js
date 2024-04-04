@@ -27,7 +27,7 @@ export default {
   babel({
    extensions: ['.js', '.jsx', '.ts', '.tsx'],
    exclude: ['node_modules/**'],
-   babelHelpers: 'bundled',
+   babelHelpers: 'runtime',
    presets: ['@babel/preset-react'],
    plugins: ['@babel/plugin-transform-runtime'],
   }),
