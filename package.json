@@ -1,10 +1,14 @@
 {
   "name": "react-nifty-hooks",
   "version": "1.0.0",
-  "description": "Description will be available soon",
+  "description": "React Custom Hooks",
+  "homepage": "https://github.com/Julu1994/ReactNiftyHooks",
   "repository": {
     "type": "git",
     "url": "https://github.com/Julu1994/ReactNiftyHooks"
+  },
+  "bugs": {
+    "url": "https://github.com/Julu1994/ReactNiftyHooks/issues"
   },
   "main": "dist/index.js",
   "type": "module",
@@ -14,16 +18,17 @@
     "build": "rollup -c  --environment NODE_ENV:production",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier --write .",
-    "fix-all": "npm run lint -- --fix && git add -A . && npm run prettier"
+    "fix-all": "npm run lint -- --fix && git add -A . && npm run prettier",
+    "prepare": "husky install"
   },
-  "author": "Mahamudur Rahamn Jewel",
+  "author": "Mahamudur Rahman Jewel",
+  "license": "MIT",
   "dependencies": {
-    "@babel/runtime": "^7.24.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.23.6",
+    "@babel/plugin-transform-runtime": "^7.24.3",
     "@babel/preset-react": "^7.23.3",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
@@ -33,22 +38,17 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/react": "^18.2.45",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard-with-typescript": "^43.0.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-prettier": "^5.1.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.34.1",
     "husky": "^8.0.0",
     "prettier": "^3.1.1",
     "rollup": "^4.9.1",
     "ts-jest": "^29.1.1",
-    "typescript": "^5.4.3"
+    "typescript": "^5.3.3"
   },
   "husky": {
     "hooks": {
