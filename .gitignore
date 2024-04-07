@@ -2,3 +2,5 @@ node_modules/
 dist
 .env
 .npmignore
+.vscode
+react-nifty-hooks*.tgz
