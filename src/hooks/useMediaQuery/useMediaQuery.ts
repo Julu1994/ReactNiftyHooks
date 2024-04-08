@@ -15,7 +15,7 @@ import { useState, useEffect } from 'react'
  *   // Adjust layout for mobile
  * }
  */
-const useMediaQuery = (query: string): boolean => {
+export const useMediaQuery = (query: string): boolean => {
   const getMatches = (query: string): boolean => {
     if (typeof window !== 'undefined') {
       return window.matchMedia(query).matches
@@ -41,5 +41,3 @@ const useMediaQuery = (query: string): boolean => {
 
   return matches
 }
-
-export default useMediaQuery

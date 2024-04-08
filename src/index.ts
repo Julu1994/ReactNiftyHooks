@@ -5,6 +5,7 @@ import useOutsideClick from './hooks/useOutsideClick'
 import useForm from './hooks/useForm'
 import useScrollPosition from './hooks/useScrollPosition'
 import useIntersectionObserver from './hooks/useIntersectionObserver'
+import useMediaQuery from './hooks/useMediaQuery'
 
 export {
   useDataFetch,
@@ -13,5 +14,6 @@ export {
   useOutsideClick,
   useForm,
   useScrollPosition,
-  useIntersectionObserver
+  useIntersectionObserver,
+  useMediaQuery
 }
