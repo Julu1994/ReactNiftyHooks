@@ -4,6 +4,7 @@ import usePersistedState from './hooks/usePersistedState'
 import useOutsideClick from './hooks/useOutsideClick'
 import useForm from './hooks/useForm'
 import useScrollPosition from './hooks/useScrollPosition'
+import useIntersectionObserver from './hooks/useIntersectionObserver'
 
 export {
   useDataFetch,
@@ -11,5 +12,6 @@ export {
   usePersistedState,
   useOutsideClick,
   useForm,
-  useScrollPosition
+  useScrollPosition,
+  useIntersectionObserver
 }
