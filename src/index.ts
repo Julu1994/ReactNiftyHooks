@@ -8,6 +8,7 @@ import useIntersectionObserver from './hooks/useIntersectionObserver'
 import useMediaQuery from './hooks/useMediaQuery'
 import useDebounce from './hooks/useDebunce'
 import usePrevious from './hooks/usePrevious'
+import useInterval from './hooks/useInterval'
 
 export {
   useDataFetch,
@@ -19,5 +20,6 @@ export {
   useIntersectionObserver,
   useMediaQuery,
   useDebounce,
-  usePrevious
+  usePrevious,
+  useInterval
 }
