@@ -24,8 +24,8 @@ Below are examples on how to use each hook provided by this package.
 
 Manage form states, handle changes, and validate form inputs with ease.
 
-```javascript
-import { useForm } from 'react-useful-hooks'
+```tsx
+import { useForm } from 'react-nifty-hooks'
 
 // Component example
 const MyForm = () => {
@@ -42,8 +42,8 @@ const MyForm = () => {
 
 Detect clicks outside of a specified element, useful for modals and dropdowns.
 
-```javascript
-import { useOutsideClick } from 'react-useful-hooks'
+```tsx
+import { useOutsideClick } from 'react-nifty-hooks'
 
 // Component example
 const MyComponent = () => {
@@ -59,8 +59,8 @@ const MyComponent = () => {
 
 Persist state in `localStorage` for across-session state management.
 
-```javascript
-import { usePersistedState } from 'react-useful-hooks'
+```tsx
+import { usePersistedState } from 'react-nifty-hooks'
 
 // Component example
 const MyComponent = () => {
@@ -73,8 +73,8 @@ const MyComponent = () => {
 
 Monitor and respond to changes in the browser's window size.
 
-```javascript
-import { useCurrentWindowSize } from 'react-useful-hooks'
+```tsx
+import { useCurrentWindowSize } from 'react-nifty-hooks'
 
 // Component example
 const MyResponsiveComponent = () => {
@@ -87,13 +87,95 @@ const MyResponsiveComponent = () => {
 
 Fetch and cache data from an API, with built-in loading and error handling.
 
-```javascript
-import { useDataFetch } from 'react-useful-hooks'
+```tsx
+import { useDataFetch } from 'react-nifty-hooks'
 
 // Component example
 const MyDataFetcher = () => {
   const { data, isLoading, error, isError } = useDataFetch(url)
   // Component logic...
+}
+```
+
+### useDebounce
+
+Delays the update of a value until after a specified duration, reducing the frequency of function calls.
+
+**Usage:**
+
+```tsx
+import { useDebounce } from 'react-nifty-hooks'
+
+const SearchInput = ({ value }) => {
+  const debouncedValue = useDebounce(value, 500)
+
+  // Use debouncedValue for searching or other rate-limited actions
+}
+```
+
+### useIntersectionObserver
+
+Observes an element's visibility within the viewport, perfect for lazy loading images or triggering animations on scroll.
+
+**Usage:**
+
+```tsx
+import { useRef } from 'react'
+import { useIntersectionObserver } from 'react-nifty-hooks'
+
+const LazyImage = src => {
+  const imgRef = useRef()
+  const isVisible = useIntersectionObserver(imgRef, { threshold: 0.1 })
+
+  return <img ref={imgRef} src={isVisible ? src : 'placeholder.jpg'} alt='' />
+}
+```
+
+### useInterval
+
+Facilitates the execution of a callback function at specified intervals. Ideal for creating timers, countdowns, or polling mechanisms.
+
+**Usage:**
+
+```tsx
+import { useInterval } from 'react-nifty-hooks'
+
+const Timer = () => {
+  useInterval(() => {
+    // Callback code here
+  }, 1000)
+}
+```
+
+### useMediaQuery
+
+Enables components to adapt based on CSS media query matches, allowing for responsive design directly within your React components.
+
+**Usage:**
+
+```tsx
+import { useMediaQuery } from 'react-nifty-hooks'
+
+const ResponsiveComponent = () => {
+  const isMobile = useMediaQuery('(max-width: 768px)')
+
+  return <div>{isMobile ? 'Mobile Content' : 'Desktop Content'}</div>
+}
+```
+
+### usePrevious
+
+Stores and returns the previous value of a given variable or state, useful for comparisons or detecting changes.
+
+**Usage:**
+
+```tsx
+import { usePrevious } from 'react-nifty-hooks'
+
+const CounterDisplay = ({ count }) => {
+  const previousCount = usePrevious(count)
+
+  return <div>Last count was {previousCount}</div>
 }
 ```
 
