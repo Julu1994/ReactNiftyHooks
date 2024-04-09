@@ -6,6 +6,7 @@ import useForm from './hooks/useForm'
 import useScrollPosition from './hooks/useScrollPosition'
 import useIntersectionObserver from './hooks/useIntersectionObserver'
 import useMediaQuery from './hooks/useMediaQuery'
+import useDebounce from './hooks/useDebunce'
 
 export {
   useDataFetch,
@@ -15,5 +16,6 @@ export {
   useForm,
   useScrollPosition,
   useIntersectionObserver,
-  useMediaQuery
+  useMediaQuery,
+  useDebounce
 }
