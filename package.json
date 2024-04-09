@@ -21,6 +21,25 @@
     "fix-all": "npm run lint -- --fix && git add -A . && npm run prettier",
     "prepare": "husky install"
   },
+  "keywords": [
+  "react",
+  "custom",
+  "custom-hooks",
+  "react-hooks",
+  "hooks",
+  "npm",
+  "useDataFetch",
+  "useCurrentWindowSize",
+  "usePersistedState",
+  "useOutsideClick",
+  "useForm",
+  "useScrollPosition",
+  "useIntersectionObserver",
+  "useMediaQuery",
+  "useDebounce",
+  "usePrevious",
+  "useInterval"
+  ],
   "author": "Mahamudur Rahman Jewel",
   "license": "MIT",
   "dependencies": {

@@ -20,7 +20,7 @@ import { useEffect, useRef } from 'react'
  *   return <div>Current count: {count}</div>;
  * };
  */
-const usePrevious = <T>(value: T): T | undefined => {
+export const usePrevious = <T>(value: T): T | undefined => {
   const ref = useRef<T>()
 
   useEffect(() => {
@@ -29,5 +29,3 @@ const usePrevious = <T>(value: T): T | undefined => {
 
   return ref.current
 }
-
-export default usePrevious
