@@ -7,6 +7,7 @@ import useScrollPosition from './hooks/useScrollPosition'
 import useIntersectionObserver from './hooks/useIntersectionObserver'
 import useMediaQuery from './hooks/useMediaQuery'
 import useDebounce from './hooks/useDebunce'
+import usePrevious from './hooks/usePrevious'
 
 export {
   useDataFetch,
@@ -17,5 +18,6 @@ export {
   useScrollPosition,
   useIntersectionObserver,
   useMediaQuery,
-  useDebounce
+  useDebounce,
+  usePrevious
 }
