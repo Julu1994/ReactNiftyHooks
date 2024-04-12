@@ -179,6 +179,82 @@ const CounterDisplay = ({ count }) => {
 }
 ```
 
+### createTypeSafeContext
+
+Creates a type-safe context and a corresponding hook to access the context, ensuring the context is used within its Provider.
+
+**Usage:**
+
+```tsx
+// Defining the context
+// UserProfileContext.ts
+import { createTypeSafeContext } from 'react-nifty-hooks'
+
+interface UserProfile {
+  id: string
+  name: string
+  email: string
+}
+
+const defaultProfile: UserProfile = {
+  id: '0',
+  name: 'Guest',
+  email: 'guest@example.com'
+}
+
+export const [useUserProfile, UserProfileProvider] =
+  createTypeSafeContext<UserProfile>(defaultProfile)
+```
+
+```tsx
+// Providing the context
+// App.tsx
+import React from 'react'
+import { UserProfileProvider } from './UserProfileContext'
+import UserProfileComponent from './UserProfileComponent'
+
+function App() {
+  const user = {
+    id: '123',
+    name: 'John Doe',
+    email: 'john.doe@example.com'
+  }
+
+  return (
+    <UserProfileProvider value={user}>
+      <div>
+        <h1>Welcome to My App</h1>
+        <UserProfileComponent />
+      </div>
+    </UserProfileProvider>
+  )
+}
+
+export default App
+```
+
+```tsx
+
+// Consuming the context
+// UserProfileComponent.tsx
+import React from 'react';
+import { useUserProfile } from './UserProfileContext';
+
+function UserProfileComponent() {
+  const userProfile = useUserProfile();
+
+  return (
+    <div>
+      <h2>User Profile</h2>
+      <p>Name: {userProfile.name}</p>
+      <p>Email: {userProfile.email}</p>
+    </div>
+  );
+}
+
+export default UserProfileComponent;
+
+
 ## Contributing
 
 Contributions are always welcome! Please read the contribution guidelines first.
@@ -186,3 +262,4 @@ Contributions are always welcome! Please read the contribution guidelines first.
 ## License
 
 [MIT](LICENSE) © [Mahamudur Rahman Jewel]
+```
