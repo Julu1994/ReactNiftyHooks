@@ -260,7 +260,7 @@ The `useDragAndDrop` hook simplifies implementing drag-and-drop functionality. I
 
 ```tsx
 import React from 'react'
-import { useDragAndDrop } from './path/to/useDragAndDrop'
+import { useDragAndDrop } from 'react-nifty-hooks'
 
 interface Item {
   id: number
