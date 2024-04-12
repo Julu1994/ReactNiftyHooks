@@ -14,7 +14,7 @@ import {
 export function createTypeSafeContext<T>(
   defaultValue: T
 ): [() => T, ProviderExoticComponent<ProviderProps<T>>] {
-  const context = createContext<T>(defaultValue) // Provide default value directly
+  const context = createContext<T>(defaultValue)
 
   const useTypeSafeContext = (): T => {
     const contextValue = useContext(context)

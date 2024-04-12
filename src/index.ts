@@ -9,6 +9,7 @@ import useMediaQuery from './hooks/useMediaQuery'
 import useDebounce from './hooks/useDebunce'
 import usePrevious from './hooks/usePrevious'
 import useInterval from './hooks/useInterval'
+import createTypeSafeContext from './hooks/crteateTypeSafeContext'
 
 export {
   useDataFetch,
@@ -21,5 +22,6 @@ export {
   useMediaQuery,
   useDebounce,
   usePrevious,
-  useInterval
+  useInterval,
+  createTypeSafeContext
 }
