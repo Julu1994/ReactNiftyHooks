@@ -234,14 +234,13 @@ export default App
 ```
 
 ```tsx
-
 // Consuming the context
 // UserProfileComponent.tsx
-import React from 'react';
-import { useUserProfile } from './UserProfileContext';
+import React from 'react'
+import { useUserProfile } from './UserProfileContext'
 
 function UserProfileComponent() {
-  const userProfile = useUserProfile();
+  const userProfile = useUserProfile()
 
   return (
     <div>
@@ -249,11 +248,44 @@ function UserProfileComponent() {
       <p>Name: {userProfile.name}</p>
       <p>Email: {userProfile.email}</p>
     </div>
-  );
+  )
 }
 
-export default UserProfileComponent;
+export default UserProfileComponent
+```
 
+### useDragAndDrop
+
+The `useDragAndDrop` hook simplifies implementing drag-and-drop functionality. It manages the dragging state and the data being dragged, providing easy-to-use functions to handle drag start and end events.
+
+```tsx
+import React from 'react'
+import { useDragAndDrop } from './path/to/useDragAndDrop'
+
+interface Item {
+  id: number
+  text: string
+}
+
+function DraggableItemComponent() {
+  const { isDragging, draggedData, handleDragStart, handleDragEnd } =
+    useDragAndDrop<Item>()
+
+  return (
+    <div>
+      <div
+        draggable
+        onDragStart={() => handleDragStart({ id: 1, text: 'Drag me' })}
+        onDragEnd={handleDragEnd}
+        style={{ opacity: isDragging ? 0.5 : 1 }}
+      >
+        {isDragging ? 'Dragging...' : 'Drag me'}
+      </div>
+      {draggedData && <div>Dragging: {draggedData.text}</div>}
+    </div>
+  )
+}
+```
 
 ## Contributing
 
@@ -262,4 +294,7 @@ Contributions are always welcome! Please read the contribution guidelines first.
 ## License
 
 [MIT](LICENSE) © [Mahamudur Rahman Jewel]
+
+```
+
 ```
