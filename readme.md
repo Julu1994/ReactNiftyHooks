@@ -14,7 +14,26 @@ Or with yarn:
 
 ```bash
 yarn add react-nifty-hooks
+
 ```
+
+### Table of Contents
+
+| No. | Hooks                                                   |
+| --- | ------------------------------------------------------- |
+|     |                                                         |
+| 1   | **[useForm](#useForm)**                                 |
+| 2   | **[useOutsideClick](#useOutsideClick)**                 |
+| 3   | **[usePersistedState](#usePersistedState)**             |
+| 4   | **[useDebounce](#useForm)**                             |
+| 5   | **[useCurrentWindowSize](#useCurrentWindowSize)**       |
+| 6   | **[useIntersectionObserver](#useIntersectionObserver)** |
+| 7   | **[useInterval](#useInterval)**                         |
+| 8   | **[useMediaQuery](#useMediaQuery)**                     |
+| 9   | **[usePrevious](#usePrevious)**                         |
+| 10  | **[createTypeSafeContext](#createTypeSafeContext)**     |
+| 11  | **[useIntersectionObserver](#useIntersectionObserver)** |
+| 12  | **[ useDragAndDrop](#useDragAndDrop)**                  |
 
 ## Usage
 
