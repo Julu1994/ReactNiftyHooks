@@ -11,6 +11,7 @@ import usePrevious from './hooks/usePrevious'
 import useInterval from './hooks/useInterval'
 import createTypeSafeContext from './hooks/crteateTypeSafeContext'
 import useDragAndDrop from './hooks/useDragAndDrop'
+import useFetchWithRetry from './hooks/useFetchWithRetry'
 
 export {
   useDataFetch,
@@ -25,5 +26,6 @@ export {
   usePrevious,
   useInterval,
   createTypeSafeContext,
-  useDragAndDrop
+  useDragAndDrop,
+  useFetchWithRetry
 }
