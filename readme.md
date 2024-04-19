@@ -20,7 +20,7 @@ yarn add react-nifty-hooks
 ### Table of Contents
 
 | No. | Hooks                                                   |
-| --- | ------------------------------------------------------- |
+| --- | ------------------------------------------------------- | --- |
 |     |                                                         |
 | 1   | **[useForm](#useForm)**                                 |
 | 2   | **[useOutsideClick](#useOutsideClick)**                 |
@@ -34,6 +34,7 @@ yarn add react-nifty-hooks
 | 10  | **[createTypeSafeContext](#createTypeSafeContext)**     |
 | 11  | **[useIntersectionObserver](#useIntersectionObserver)** |
 | 12  | **[ useDragAndDrop](#useDragAndDrop)**                  |
+| 13  | **[ useFetchWithRetry](#useFetchWithRetry)**            |     |
 
 ## Usage
 
@@ -304,6 +305,37 @@ function DraggableItemComponent() {
     </div>
   )
 }
+```
+
+### useFetchWithRetry
+
+The `useFetchWithRetry`fetches data from a specified URL with retry logic, it attempts to make an HTTP GET request to retrieve data and will retry if the fetch fails.
+
+```tsx
+import React from 'react'
+import { useFetchWithRetry } from 'react-nifty-hooks'
+
+const MyDataComponent = () => {
+  const url = 'https://api.example.com/data' // The URL to fetch data from
+  const options = {
+    retries: 5, // Number of retry attempts
+    retryDelay: 2000 // Delay between retries in milliseconds
+  }
+
+  const [data, loading, error] = useFetchWithRetry<MyDataType>(url, options)
+
+  if (loading) return <div>Loading...</div>
+  if (error) return <div>Error: {error.message}</div>
+
+  return (
+    <div>
+      <h1>Fetched Data</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  )
+}
+
+export default MyDataComponent
 ```
 
 ## Contributing

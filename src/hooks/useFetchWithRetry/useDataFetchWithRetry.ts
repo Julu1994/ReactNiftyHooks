@@ -19,10 +19,10 @@ import { FetchOptions } from './type'
 export function useFetchWithRetry<T>(
   url: string,
   options?: Partial<FetchOptions>
-): [T | null, boolean, any] {
+): [T | null, boolean, unknown] {
   const [data, setData] = useState<T | null>(null)
   const [loading, setLoading] = useState<boolean>(true)
-  const [error, setError] = useState<any>(null)
+  const [error, setError] = useState<unknown>(null)
 
   const { retries = 3, retryDelay = 1000 } = options || {}
 
