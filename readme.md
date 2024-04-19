@@ -20,7 +20,7 @@ yarn add react-nifty-hooks
 ### Table of Contents
 
 | No. | Hooks                                                   |
-| --- | ------------------------------------------------------- | --- |
+| --- | ------------------------------------------------------- |
 |     |                                                         |
 | 1   | **[useForm](#useForm)**                                 |
 | 2   | **[useOutsideClick](#useOutsideClick)**                 |
@@ -34,7 +34,8 @@ yarn add react-nifty-hooks
 | 10  | **[createTypeSafeContext](#createTypeSafeContext)**     |
 | 11  | **[useIntersectionObserver](#useIntersectionObserver)** |
 | 12  | **[ useDragAndDrop](#useDragAndDrop)**                  |
-| 13  | **[ useFetchWithRetry](#useFetchWithRetry)**            |     |
+| 13  | **[ useFetchWithRetry](#useFetchWithRetry)**            |
+| 14  | **[ useThrottle](#useThrottle)**                        |
 
 ## Usage
 
@@ -336,6 +337,41 @@ const MyDataComponent = () => {
 }
 
 export default MyDataComponent
+```
+
+### useThrottle
+
+useThrottle hook throttles a function. The function will only be allowed to execute at most once every specified number of milliseconds.
+
+```tsx
+import React, { useState } from 'react'
+import useThrottle from './useThrottle'
+
+const SearchComponent = () => {
+  const [input, setInput] = useState('')
+  const throttledInput = useThrottle(input, 1000) // Throttle input changes by 1 second
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(event.target.value)
+  }
+
+  // Imagine `searchAPI` is a function that triggers an API call
+  useEffect(() => {
+    if (throttledInput) {
+      console.log('API call with:', throttledInput)
+      // searchAPI(throttledInput);
+    }
+  }, [throttledInput])
+
+  return (
+    <div>
+      <input type='text' value={input} onChange={handleChange} />
+      <p>Throttled Value: {throttledInput}</p>
+    </div>
+  )
+}
+
+export default SearchComponent
 ```
 
 ## Contributing
