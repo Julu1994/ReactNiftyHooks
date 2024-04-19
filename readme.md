@@ -326,7 +326,7 @@ const MyDataComponent = () => {
   const [data, loading, error] = useFetchWithRetry<MyDataType>(url, options)
 
   if (loading) return <div>Loading...</div>
-  if (error) return <div>Error: {error.message}</div>
+  if (error) return <div>Error! couldn't fetch datas</div>
 
   return (
     <div>
