@@ -376,8 +376,7 @@ export default SearchComponent
 
 ## Contributing
 
-Contributions are always welcome! Please read the contribution guidelines first.
-
+Contributions are always welcome! If you have any custom hooks that you think would be useful for other developers you can make a pull request.
 ## License
 
 [MIT](LICENSE) © [Mahamudur Rahman Jewel]
