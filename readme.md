@@ -1,6 +1,6 @@
 # React Nifty Hooks
 
-React Nifty Hooks is a lightweight, efficient npm package that provides a collection of custom React hooks for common web development tasks, including form management, drag and drop, simplifying context api, outside click detection, local storage state management, window size monitoring, and data fetching with caching capabilities.
+React Nifty Hooks is a lightweight, efficient npm package that provides a collection of custom React hooks for common web development tasks, including form management, throttle, drag and drop, simplifying context api, outside click detection, local storage state management, window size monitoring, and data fetching with caching capabilities.
 
 ## Installation
 
